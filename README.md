@@ -60,7 +60,7 @@ Respeitem esta estrutura ao criar ou editar arquivos:
 
 ## 👥 Divisão de Tarefas (O Roteiro da Equipe)
 
-### 🧑‍💻 Desenvolvedor 1: Back-end e Banco de Dados
+### 🧑‍💻 Desenvolvedor 1 (Victor Gabriel): Back-end e Banco de Dados
 
 **Foco:** Lógica pura e conexão com o banco.
 
@@ -71,16 +71,16 @@ Respeitem esta estrutura ao criar ou editar arquivos:
 - [ ] Criar a query de DELETE no arquivo `excluir.php`.
 - [ ] Criar a lógica de UPDATE no arquivo `editar.php`.
 
-### 🎨 Desenvolvedor 2: Front-end (UI/UX)
+### 🎨 Desenvolvedor 2 (Vitor Augusto): Front-end (UI/UX)
 
 **Foco:** Deixar bonito e responsivo (sem tocar na lógica do banco por enquanto).
 
 - [ ] Criar o HTML base e separar no `/includes/header.php` e `footer.php`.
 - [ ] Criar o design da vitrine no `index.php` usando layout de Cards (usar imagem, título e botões de editar/excluir).
-- [ ] Criar o formulário bonito para `cadastrar.php` e `editar.php` (Lembrar dos inputs de text, number e file).
-- [ ] Escrever o `/assets/style.css` usando Flexbox/Grid para garantir que funcione bem no celular.
+- [ ] Criar o formulário bonito para `cadastrar.php` e `editar.php` (Lembrar dos inputs de text, number e file precisam ser de acordo com as tabelas do banco).
+- [ ] Estilizar com CSS separado do HTML `/assets/style.css` usando Flexbox/Grid para garantir que funcione bem no celular.
 
-### 🔧 Desenvolvedor 3: Integração e Testes
+### 🔧 Desenvolvedor 3 (Peterson Ruivo): Integração e Testes
 
 **Foco:** Unir o visual com o motor e garantir que o sistema não tenha bugs.
 
