@@ -1,91 +1,69 @@
-# 📚 Sistema de Gerenciamento de Biblioteca (CRUD)
+# 📚 Sistema de Biblioteca (Versão Power Duo)
 
-Bem-vindos ao repositório do nosso projeto! Este é um sistema CRUD (Create, Read, Update, Delete) desenvolvido em PHP e MySQL para o gerenciamento de livros em uma biblioteca.
-
-Nosso objetivo é construir um sistema funcional, responsivo e que permita o upload de capas de livros, dividindo o trabalho de forma inteligente entre a equipe para otimizar o tempo.
+Este projeto é um CRUD completo com sistema de login e upload de imagens, desenvolvido para gerenciar o acervo de uma biblioteca de forma simples e eficiente.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-- **Back-end:** PHP
+- **Linguagem:** PHP 8+
 - **Banco de Dados:** MySQL
-- **Front-end:** HTML5, CSS3
-- **Servidor Local:** XAMPP (Apache + MySQL)
+- **Estilo:** CSS3 (Flexbox/Grid)
+- **Estrutura:** HTML5
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## 👥 Divisão de Responsabilidades (Sprint Dupla)
 
-Para que o sistema funcione no computador de cada um, sigam estes passos rigorosamente:
+### 🧑‍💻 Desenvolvedor 1: Back-end e Segurança
 
-1. **Inicie o Servidor:** Abra o XAMPP/WAMP e inicie os módulos **Apache** e **MySQL**.
-2. **Posicione a Pasta:** Coloque a pasta `biblioteca` dentro do diretório do seu servidor local (ex: `C:\xampp\htdocs\biblioteca`).
-3. **Configure o Banco de Dados:**
-   - Acesse `http://localhost/phpmyadmin` no navegador.
-   - Crie um banco de dados chamado `biblioteca_db`.
-   - Importe o arquivo `banco/script.sql` (ou cole o código SQL diretamente na aba "SQL") para criar a tabela `livros`.
-4. **Crie a pasta de Imagens:** Certifique-se de que a pasta `/uploads` existe na raiz do projeto (se não existir, crie-a manualmente).
-5. **Acesse o Sistema:** Abra o navegador e digite `http://localhost/biblioteca`.
+- [ ] **DB:** Criar tabelas `livros` (id, titulo, autor, genero, ano, capa) e `usuarios` (id, usuario, senha).
+- [ ] **Login:** Criar `login.php` que valida usuário e inicia a `$_SESSION`.
+- [ ] **Lógica CRUD:** Criar os processos de INSERT, UPDATE e DELETE.
+- [ ] **Upload:** Criar a função de validação e movimentação da imagem para `/uploads`.
+
+### 🎨 Desenvolvedor 2: Front-end e Integração
+
+- [ ] **Telas:** Criar `index.php` (Login), `dashboard.php` (Listagem), `form_livro.php`.
+- [ ] **Estilo:** Criar o `style.css` global (Layout Responsivo).
+- [ ] **Integração:** Inserir os comandos PHP do Dev 1 dentro do HTML.
+- [ ] **Segurança de Tela:** Adicionar o verificador de sessão no topo das páginas privadas.
 
 ---
 
-## 📂 Estrutura de Diretórios
-
-Respeitem esta estrutura ao criar ou editar arquivos:
+## 📂 Estrutura de Pastas
 
     /biblioteca
     │
-    ├── /banco                -> Script SQL para criar o banco de dados
-    │   └── script.sql
+    ├── /banco
+    │   └── script.sql        (Scripts de criação das tabelas)
     │
-    ├── /config               -> Configurações essenciais
-    │   └── conexao.php       (Ponte de acesso ao banco usando PDO ou MySQLi)
+    ├── /config
+    │   └── conexao.php       (Conexão PDO/MySQLi)
     │
-    ├── /includes             -> Partes do layout que se repetem
-    │   ├── header.php        (Head do HTML, CSS linkado e Menu superior)
-    │   └── footer.php        (Fechamento de tags e rodapé)
+    ├── /assets
+    │   └── style.css         (Design responsivo)
     │
-    ├── /assets               -> Arquivos estáticos
-    │   └── style.css         (Estilo do projeto inteiro)
+    ├── /uploads              (Pasta para as capas dos livros)
     │
-    ├── /uploads              -> Imagens salvas (Apenas a pasta vazia)
-    │
-    ├── index.php             -> (READ) Lista todos os livros em Cards
-    ├── cadastrar.php         -> (CREATE) Formulário + Processamento + Upload
-    ├── editar.php            -> (UPDATE) Formulário preenchido + Processamento
-    └── excluir.php           -> (DELETE) Lógica para deletar e redirecionar
+    ├── index.php             (Tela de Login - Porta de entrada)
+    ├── dashboard.php         (Vitrine de livros após o login)
+    ├── cadastrar.php         (Lógica + Form de novo livro)
+    ├── editar.php            (Lógica + Form de edição)
+    ├── excluir.php           (Lógica de deleção)
+    └── logout.php            (Encerra a sessão)
 
 ---
 
-## 👥 Divisão de Tarefas (O Roteiro da Equipe)
+## 🚀 Como Iniciar
 
-### 🧑‍💻 Desenvolvedor 1 (Victor Gabriel): Back-end e Banco de Dados
+1.  Importe o `script.sql` no seu MySQL.
+2.  Insira um usuário manualmente na tabela `usuarios` para conseguir logar.
+3.  Configure o `conexao.php` com seus dados locais (localhost, root, senha).
+4.  Crie a pasta `/uploads` com permissão de escrita.
 
-**Foco:** Lógica pura e conexão com o banco.
+---
 
-- [ ] Escrever o SQL de criação no `/banco/script.sql`.
-- [ ] Criar o script de conexão no `/config/conexao.php`.
-- [ ] Criar a lógica de INSERT no arquivo `cadastrar.php` (receber o `$_POST`).
-- [ ] Criar o script de upload da imagem recebendo o `$_FILES` e movendo para `/uploads`.
-- [ ] Criar a query de DELETE no arquivo `excluir.php`.
-- [ ] Criar a lógica de UPDATE no arquivo `editar.php`.
+## 💡 Dica de Velocidade para nós
 
-### 🎨 Desenvolvedor 2 (Vitor Augusto): Front-end (UI/UX)
-
-**Foco:** Deixar bonito e responsivo (sem tocar na lógica do banco por enquanto).
-
-- [ ] Criar o HTML base e separar no `/includes/header.php` e `footer.php`.
-- [ ] Criar o design da vitrine no `index.php` usando layout de Cards (usar imagem, título e botões de editar/excluir).
-- [ ] Criar o formulário bonito para `cadastrar.php` e `editar.php` (Lembrar dos inputs de text, number e file precisam ser de acordo com as tabelas do banco).
-- [ ] Estilizar com CSS separado do HTML `/assets/style.css` usando Flexbox/Grid para garantir que funcione bem no celular.
-
-### 🔧 Desenvolvedor 3 (Peterson Ruivo): Integração e Testes
-
-**Foco:** Unir o visual com o motor e garantir que o sistema não tenha bugs.
-
-- [ ] Inserir o `enctype="multipart/form-data"` no formulário feito pelo Dev 2.
-- [ ] Pegar o HTML dos Cards do Dev 2 e colocar dentro de um laço de repetição (`while`) no `index.php` para imprimir os dados do banco que o Dev 1 preparou.
-- [ ] Garantir que o atributo `src` da tag `<img src="...">` aponte corretamente para a pasta `/uploads`.
-- [ ] Adicionar confirmação no botão de excluir (`onclick="return confirm('Tem certeza?')"`).
-- [ ] Fazer o cadastro de 5 livros reais para testar o sistema de ponta a ponta.
+Não tente fazer arquivos separados para "processar_cadastro" e "formulario_cadastro". Façam o código PHP de processamento no **topo** do próprio arquivo do formulário. Isso diminui a quantidade de arquivos e facilita a correção de erros!
