@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Recebe formulário e evita SQL Injection
     $nome = mysqli_real_escape_string($conexao, $_POST["nome"]);
-    $nickname = mysqli_real_escape_string($conexao, $_POST["nickname"]);
+    $username = mysqli_real_escape_string($conexao, $_POST["username"]);
     $email = mysqli_real_escape_string($conexao, $_POST["email"]);
     $telefone = mysqli_real_escape_string($conexao, $_POST["telefone"]);
     $senha = $_POST["senha"];
@@ -14,19 +14,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Criptografar senha)
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Verificar se o e-mail ou o nickname já estão cadastrados
-    $sql_busca = "SELECT id FROM usuarios WHERE email = '$email' OR nickname = '$nickname'";
+    // Verificar se o e-mail ou o username já estão cadastrados
+    $sql_busca = "SELECT id FROM usuarios WHERE email = '$email' OR username = '$username'";
     $resultado_busca = mysqli_query($conexao, $sql_busca);
 
     if (mysqli_num_rows($resultado_busca) > 0) {
         // Se já tiver cadastro, devolve para a página inicial com erro
-        $erro = "E-mail ou Nickname já estão em uso. Tente outro.";
+        $erro = "E-mail ou username já estão em uso. Tente outro.";
         header("Location: index.php?erro=" . urlencode($erro));
         exit;
     } else {
         // Salvar o novo usuário no banco de dados
-        $sql_salvar = "INSERT INTO usuarios (nome, nickname, email, telefone, senha) 
-                       VALUES ('$nome', '$nickname', '$email', '$telefone', '$senha_hash')";
+        $sql_salvar = "INSERT INTO usuarios (nome, username, email, telefone, senha) 
+                       VALUES ('$nome', '$username', '$email', '$telefone', '$senha_hash')";
 
         if (mysqli_query($conexao, $sql_salvar)) {
             // Sucesso! Redireciona para o index
