@@ -49,10 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: index.php?erro=1");
         exit;
     }
-} else {
-    // Se tentar acessar login.php direto pela barra de endereços
-    header("Location: index.php");
-    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -61,11 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page Biblioteca</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <style>
     body {
-        background-image: url('img/fundo_login.png');
+        background-image: url('uploads/fundo_login.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
