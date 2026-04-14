@@ -1,171 +1,181 @@
 h1 {
-    color: whitesmoke;
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    
-  }
-  .font_tela_login {
-    color: whitesmoke;
-    font-size: large;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .user{
-    color: whitesmoke;
-    margin-top: 8px;
-    font-size: 20px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .password{
-    color: whitesmoke;  
-    font-size: 20px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-  .login-form {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos em uma coluna */
-    align-items: center; /* Centraliza os elementos horizontalmente */
-    gap: 10px; /* Espaçamento entre os elementos */  
-  }
-  .btt_login {
-    background-color: rgba(98, 102, 122, 0.808);;
-    margin: 10px;
-    color: white;
-    font-size: small;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .btt_forget_password{
-    background-color: rgba(98, 102, 122, 0.808);;
-    color: white;
-    font-size: small;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 20px;
-  }
-  .btt_register{
-    background-color: rgba(98, 102, 122, 0.808);
-    color: white;
-    font-size: small;
-    padding: 10px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-  }
-  .back{
-    background-color: rgba(98, 102, 122, 0.808);;
-    color: white;
-    font-size: small;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .container_b{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100vh;
-    margin: 0 120px 0 0;
-  }
-  .cadastro{
-    color:whitesmoke;
-    font-size: 50px;
-    line-height: large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0 0 20px 0;
-    display: left;
-  }
-  .nickname{
-    color: rgb(245, 245, 245);
-    margin-top: 8px;
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .pass{
-    color: rgb(245, 245, 245); 
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-  .confirm-pass{
-    color: rgb(245, 245, 245); 
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-  .name-1{
-    color: rgb(245, 245, 245); 
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-  .email-1{
-    color: rgb(245, 245, 245); 
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-  .phone{
-    color:rgb(245, 245, 245);
-    font-size: 30px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: auto;
-  }
-  .age{
-    color: rgb(245, 245, 245);
-    font-size: 25px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: center;
-    size-adjust: auto;
-  }
-  .btt-cadastro{
-    background-color: rgba(98, 102, 122, 0.808);;
-    color: white;
-    font-size: 20px;
-    padding: 10px 10px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin:5px;
-  }
-  body {
-    background-image: url('img/fundo-cadastro.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-  }
-  .input-form{
-    width: 100%;  
-    color: rgb(2, 2, 2);
-    margin-top: 8px;
-    font-size: 18px;
-    line-height: normal;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }	
+  color: rgb(27, 18, 18);
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+.font_tela_login {
+  color: rgb(2, 2, 2);
+  font-size: large;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.user{
+  color: rgb(12, 11, 11);
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.password{
+  color: rgb(3, 0, 0);  
+  font-size: 20px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+.login-form {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em uma coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  gap: 10px; /* Espaçamento entre os elementos */  
+}
+.btt_login {
+  background-color: rgba(98, 102, 122, 0.808);;
+  margin: 10px;
+  color: white;
+  font-size: small;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btt_forget_password{
+  background-color: rgba(98, 102, 122, 0.808);;
+  color: white;
+  font-size: small;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 20px;
+}
+.btt_register{
+  background-color: rgba(98, 102, 122, 0.808);
+  color: white;
+  font-size: small;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+.back{
+  background-color: rgba(98, 102, 122, 0.808);;
+  color: white;
+  font-size: small;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container_b{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 120px 0 0;
+}
+.cadastro{
+  color:whitesmoke;
+  font-size: 50px;
+  line-height: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 0 20px 0;
+  display: left;
+}
+.nickname{
+  color: rgb(245, 245, 245);
+  margin-top: 8px;
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.pass{
+  color: rgb(245, 245, 245); 
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+.confirm-pass{
+  color: rgb(245, 245, 245); 
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+.name-1{
+  color: rgb(245, 245, 245); 
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+.email-1{
+  color: rgb(245, 245, 245); 
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+.phone{
+  color:rgb(245, 245, 245);
+  font-size: 30px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: auto;
+}
+.age{
+  color: rgb(245, 245, 245);
+  font-size: 25px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: center;
+  size-adjust: auto;
+}
+.btt-cadastro{
+  background-color: rgba(98, 102, 122, 0.808);;
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin:5px;
+}
+body {
+  background-image: url('img/fundo-cadastro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  width: 30%;
+  height: 45%;
+  background-color: rgba(255, 255, 255, 0.712); /* Ajuste a opacidade (0.7) conforme necessário */
+  z-index: -1;
+}
+.input-form{
+  width: 100%;  
+  color: rgb(2, 2, 2);
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: normal;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}	
