@@ -154,7 +154,7 @@ h1 {
   margin:5px;
 }
 body {
-  background-image: url('img/fundo-cadastro.png');
+  background-image: url('../uploads/fundo-cadastro.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
