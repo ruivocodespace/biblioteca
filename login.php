@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <body>
     <div class="container">
       <h1>Bem-Vindo! Acesse sua conta.</h1>
-      <form action="home.html" method="post">
+      <form action="" method="post">
         <label class="user" for="username">Username:</label>
           <input type="text" id="username" name="username" required /><br>
             <br />
