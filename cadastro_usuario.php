@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
         }
     }
-
     if (mysqli_query($conexao, $sql)) {
         header("Location: cadastro.php?sucesso=1");
         exit;
