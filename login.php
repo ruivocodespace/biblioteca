@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       if ($_SESSION) {
         // Redirecionar para o dashboard
-        header("Location: dashboard.php");
+        header("Location: homepage_admin.php");
         exit;
         // Se a senha estiver incorreta
       } else {
@@ -59,42 +59,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home page Biblioteca</title>
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    body {
-      background-image: url('uploads/fundo_login.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />  
 </head>
+  <body class="pag-login">
+    <div class="login-wrapper">
+      <h1>Bem-Vindo! Acesse sua conta.</h1>
 
-<body>
-  <div class="container">
-    <h1>Bem-Vindo! Acesse sua conta.</h1>
-    <form action="" method="post">
-      <label class="user" for="username">Username:</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        required />
-      <br>
+      <form class="login-form" action="" method="post">
+        <div class="form-group">
+          <label class="label-form" for="username">Username:</label>
+          <input class="input-form" type="text" id="username" name="username" required />
+        </div>
+         
+        <div calss="form-group">
+          <label class="password" for="password">Password:</label>
+          <input class="input-form" type="password" id="senha" name="senha" required />
+        </div>
 
-      <br />
-      <label class="password" for="password">Password:</label>
-      <input
-        type="password"
-        id="senha"
-        name="senha"
-        required />
-      <br />
-      <button type="submit" class="btt_login">Login</button>
-      <button class="btt_register" type="button" onclick="window.location.href='register.html'">Registrar</button>
-    </form>
-  </div>
-</body>
-
+        <button type="submit" class="btn btn-primario">Entrar</button>
+        
+        <button type="button" class="btn btn-secundario" onclick="window.location.href='cadastro_usuario.php'">
+          Criar Conta
+        </form>
+    </div>
+  </body>
 </html>
