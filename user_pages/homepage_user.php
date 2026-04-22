@@ -1,6 +1,6 @@
 <?php
 require_once "../includes/logado.php";
-require_once "config/conexao.php";
+require_once "../config/conexao.php";
 
 $sql = "SELECT * FROM livros ORDER BY id DESC LIMIT 24";
 $res = mysqli_query($conexao, $sql);
@@ -14,7 +14,7 @@ $livros = $res ? mysqli_fetch_all($res, MYSQLI_ASSOC) : [];
     <?php foreach ($livros as $l): ?>
     <article class="book-card">
         <div class="book-cover">
-            <img src="uploads/capas/<?php echo htmlspecialchars($l['capa'] ?? 'sem-nome.jpeg'); ?>" alt="Capa" onerror="this.src='uploads/capas/sem-nome.jpeg'">
+            <img src="../uploads/capas/<?php echo htmlspecialchars($l['capa'] ?? 'sem-nome.jpeg'); ?>" alt="Capa" onerror="this.src='uploads/capas/sem-nome.jpeg'">
         </div>
         <div class="book-details">
             <h4 class="book-title"><?php echo htmlspecialchars($l['titulo']); ?></h4>

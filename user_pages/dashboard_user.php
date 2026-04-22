@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "config/conexao.php";
+require_once "../config/conexao.php";
 
 // 🔒 Segurança: Redireciona se não estiver logado
 if (!isset($_SESSION['usuario_id'])) {
@@ -30,7 +30,7 @@ $page_file = match($page) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Biblioteca - <?php echo ucfirst($page); ?></title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <style>
         /* === CSS EXCLUSIVO DO DASHBOARD USUÁRIO === */
         .user-dashboard { display: flex; min-height: 100vh; background: #f8f9fa; }
