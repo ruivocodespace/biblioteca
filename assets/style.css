@@ -31,8 +31,11 @@ body.pag-login {
     justify-content: center;
 }
 
-body.pag-cadastro, body.pag-index {
+body.pag-cadastro{
     background: url('../uploads/fundo-cadastro.png') center/cover no-repeat fixed;
+}
+body.pag-index {
+    background-color: #f8f9fa; 
 }
 
 /* === 2. COMPONENTES REUTILIZÁVEIS === */
@@ -200,4 +203,181 @@ body.pag-cadastro, body.pag-index {
     .index-search { max-width: 100%; }
     .books-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
     .hero h2 { font-size: 24px; }
+}
+/* RESPONSIVIDADE (< 768px) */
+@media (max-width: 768px) {
+    
+    /* === LAYOUT GERAL === */
+    body { font-size: 14px; }
+    
+    /* === LOGIN (Centralizado) === */
+    .login-wrapper {
+        margin: 15px;
+        padding: 25px 20px;
+        max-width: 100%;
+    }
+    .login-wrapper h1 { font-size: 24px; }
+    
+    /* === CADASTRO (Sidebar + Form) === */
+    .cadastro-layout {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+    .cadastro-sidebar,
+    .cadastro-form-wrapper {
+        width: 100%;
+        max-width: 100%;
+        order: 2; /* Formulário aparece primeiro no mobile */
+    }
+    .cadastro-sidebar { order: 1; } /* Lista aparece depois */
+    .cadastro-form-wrapper h1 { font-size: 26px; text-align: center; }
+    
+    /* === DASHBOARD ADMIN/USER (Sidebar Lateral) === */
+    .admin-wrapper,
+    .user-dashboard {
+        flex-direction: column;
+    }
+    .admin-sidebar,
+    .user-sidebar {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+    .admin-nav,
+    .user-nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch; /* Rolagem suave no iOS */
+    }
+    .admin-nav a,
+    .user-nav a {
+        white-space: nowrap;
+        padding: 10px 14px;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+    .admin-content,
+    .user-main {
+        padding: 15px;
+    }
+    
+    /* === HEADER DA INDEX === */
+    .index-header,
+    .main-header {
+        padding: 12px 15px;
+    }
+    .header-content,
+    .index-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .index-search,
+    .search-form {
+        max-width: 100%;
+        width: 100%;
+    }
+    .auth-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn-outline,
+    .btn-primary,
+    .btn-secundario {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    /* === GRID DE LIVROS === */
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    .book-cover { height: 200px; }
+    .book-title { font-size: 15px; }
+    .book-author { font-size: 12px; }
+    .btn-small {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    /* === TABELAS (Admin) === */
+    .data-table,
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    .cover-thumb {
+        width: 35px;
+        height: 50px;
+    }
+    
+    /* === CARDS DE LISTAS (Favoritos / Ler Depois) === */
+    .list-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    .list-card img {
+        width: 80px;
+        height: 120px;
+        margin: 0 auto 10px;
+    }
+    .list-info { width: 100%; }
+    
+    /* === FORMULÁRIOS === */
+    .input-form {
+        padding: 10px;
+        font-size: 15px; /* Evita zoom automático no iOS */
+    }
+    .form-group { gap: 4px; }
+    .label-form { font-size: 14px; }
+    
+    /* === BOTÕES DE AÇÃO === */
+    .btn-action,
+    .btn-remove,
+    .btn-save-comment {
+        padding: 8px 12px;
+        font-size: 12px;
+        min-height: 40px; /* Área de toque mínima para mobile */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* === HERO SECTION === */
+    .hero h2 { font-size: 22px; }
+    .hero p { font-size: 14px; }
+    
+    /* === FOOTER === */
+    .main-footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas (< 400px) */
+@media (max-width: 400px) {
+    .books-grid {
+        grid-template-columns: 1fr; /* 1 livro por linha */
+    }
+    .book-cover { height: 240px; }
+    .admin-nav a,
+    .user-nav a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
 }
